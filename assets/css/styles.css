@@ -1,0 +1,645 @@
+/***********************************************************************************/
+/* Autor: Rafael Marques - Caso de estudos para o canal do youtube/@fieldesigner   */
+/***********************************************************************************/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  border: none;
+  outline: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #1a2021;
+  background-image: url(../images/bg.png);
+  color: #fff;
+  font-family: 'Montserrat', -apple-system, Calibri, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+header{
+  background: url(../images/topo-efeito.png) no-repeat;
+  background-size: auto 59%;
+  background-position: top center;
+  padding-top: 20px;
+}
+.degradeHeader{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+46&1+0,0+46 */
+  background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 46%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 46%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 46%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.7;
+  top: 0;
+}
+
+.corrente{
+  background: url(../images/correntes.png) no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+}
+
+.logo{
+  display: block;
+  margin-bottom: 20px;
+}
+.logo img{
+  width: auto;
+  height: 50px;
+}
+
+.centro{
+  margin: 0 20px;
+}
+
+.wendell1{
+  margin-bottom: -30px;
+}
+.wendell1 img{
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+
+.wendell1 .light{
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+
+h1, h2{
+  font-size: 1.7rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  color: #00d457;
+  margin-bottom: 30px;
+}
+
+h1 strong, h2 strong{
+  color: #fff;
+  font-weight: 800;
+}
+
+.itens{
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.item{
+  display: flex;
+  align-items: center;
+  font-size: 0.63rem;
+  text-transform: uppercase;
+}
+.item svg{
+  height: 28px;
+  fill: #00d457;
+  opacity: 0.7;
+  margin-right: 8px;
+}
+
+.cta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.preco{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.preco .condicao{
+  font-size: 1rem;
+  width: 58px;
+  text-align: right;
+}
+
+.preco .valor{
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+}
+
+.btnPadrao{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0dd85f+0,78d891+100 */
+  background: rgb(13,216,95); /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  rgba(13,216,95,1) 0%, rgba(120,216,145,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(13,216,95,1) 0%,rgba(120,216,145,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(13,216,95,1) 0%,rgba(120,216,145,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0dd85f', endColorstr='#78d891',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  font-weight: 800;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px 40px;
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+  border-radius: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 0 #01923e, 
+              0 14px 10px -7px #000;
+  transition: color 0.3s;
+  text-align: center;
+}
+.btnPadrao:hover{
+  color:#fff;
+}
+
+header nav{
+  border: solid 2px rgba(13,216,95,0.5);
+  border-radius: 20px;
+  padding: 5px;
+}
+header nav ul{
+  list-style: none;
+}
+header nav ul li{
+  display: block;
+}
+header nav ul li a{
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: block;
+  padding: 7px 10px;
+  text-align: center;
+}
+header nav ul li a:hover{
+  color: #00d457;
+}
+
+
+section, header{
+  margin-bottom: 50px;
+}
+section{
+  overflow-x: hidden;
+  padding-top: 30px;
+}
+
+.backText{
+  position: absolute;
+  left: -20px;
+  font-size: 3.7rem;
+  text-transform: uppercase;
+  font-weight: 800;  
+  background: -moz-linear-gradient(top,  rgba(13,216,95,1) 0%, rgba(114,216,142,0) 94%, rgba(120,216,145,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(13,216,95,1) 0%,rgba(114,216,142,0) 94%,rgba(120,216,145,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(13,216,95,1) 0%,rgba(114,216,142,0) 94%,rgba(120,216,145,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0dd85f', endColorstr='#0078d891',GradientType=0 ); /* IE6-9 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.15;
+  top: 0px;
+}
+
+.whiteBackText{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  left: unset;
+  right: -20px;
+}
+
+h2{
+  font-size: 1.7rem;
+  line-height: 1.6rem;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 20px;
+}
+h2 strong{
+  color: #00d457;
+}
+
+section p{
+  font-size: 0.9rem;
+}
+
+h3{
+  font-size: 1.8rem;
+  line-height: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #1a2021;
+  text-shadow: 
+    1px 1px 0 #00d457,
+    -1px 1px 0 #00d457,
+    1px -1px 0 #00d457,
+    -1px -1px 0 #00d457;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+.pilar{
+  display: block;
+  margin-bottom: 40px;
+  max-width: 741px;
+}
+
+.pilar img{
+  float: right;
+  width: 45%;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.pilar img.imgToLeft{
+  margin-left: unset;
+  margin-right: 10px;  
+  float: left;
+}
+
+.pilar h4,
+.motivo h4{
+  text-transform: uppercase;
+  color:#00d457;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+
+.wendell{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+73,0.65+100 */
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 73%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 73%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 73%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+  padding-bottom: 10px;
+  border-radius: 0 0 40px 0;
+  border-bottom: rgb(0, 212, 87, .4) 1px solid;
+}
+.wendell img{
+  width: 100%;
+  height: auto;
+  margin-bottom: -100px;
+  top: -46px;
+}
+.wendell .desc p{
+  margin-bottom: 12px;
+}
+
+.green{
+  color: #00d457;
+}
+
+.motivos{
+  display: block;
+}
+.motivo{
+  border: solid 2px rgba(13,216,95,0.5);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.motivo::before{
+  content: attr(data-number);
+  display: block;
+  font-size: 2rem;
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  font-size: 3.5rem;
+  font-weight: 800;
+  z-index: -1;
+  color: rgb(0, 212, 87, 0.15);
+}
+
+footer{
+  background: rgba(0,0,0,0.8);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.copy{
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+.cnpj{
+  color: rgba(255,255,255,0.7);
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 555px) {
+  .wendell1{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+  .wendell1 img {
+    max-height: 600px;
+    width: auto;
+  }
+  .item {
+    font-size: 0.9rem;
+  }
+  .item svg {
+    height: 37px;
+  }
+  .cta {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .btnPadrao {
+    padding: 20px 30px;
+  }
+  h1, h2 {
+    font-size: 1.9rem;
+  }
+  h3 {
+    font-size: 2rem;
+    line-height: 1.9rem;
+  }
+  .pilar h4, .motivo h4 {
+    font-size: 1.1rem;
+  }
+  .backText {
+    font-size: 4.7rem;
+  }
+  #wendell img{
+    max-height: 830px;
+    width: auto;
+    left: calc(50% - 233px);
+  }
+}
+@media screen and (min-width: 620px) {
+  .pilar {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: center;
+  }
+  .pilar .desc{
+    text-align: right;
+  }
+  .pilar img,
+  .pilar img.imgToLeft {
+    float: unset;
+    margin: 0;
+    width: 47%;
+    border-radius: 18px;
+  }
+  #pilares .pilar:nth-child(3){
+    flex-direction: row;
+  }
+  #pilares .pilar:nth-child(3) .desc{
+    text-align: left;
+  }
+  .motivos {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    gap: 15px;
+    margin: 40px 0;
+  }
+  .motivo{
+    margin: 0;
+  }
+
+}
+@media screen and (min-width: 700px) {
+  header nav{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;  
+  }
+  header nav ul li{
+    display: inline-block;
+  }
+  #porque .title{
+    display: flex;
+    gap: 20px;
+  }
+  #porque .title p{
+    width: 224px;
+    margin-bottom: 0;
+    padding-left: 20px;
+    border-left: rgb(1, 146, 62, 0.5) solid 1px;
+  }
+
+}
+@media screen and (min-width: 800px) {
+  body,
+  section p {
+    font-size: 1.1rem;
+  }
+  .pilar{
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer{
+    text-align: unset;
+  }
+  footer .centro{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .cnpj {
+    width: 100%;
+    text-align: right;
+  }
+  .copy{
+    width: 321px;
+  }
+  .copy, footer .logo {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 912px) {
+  body,
+  section p {
+    font-size: 1rem;
+  }
+  header{
+    overflow: hidden;
+    background-size: calc(1430px + 20%);
+    background-position: calc(715px + 110%) -81px;
+    background-repeat: repeat-x;
+  }
+  header .gridHeader{
+    display: grid;
+    grid-template-columns: auto 361px;
+    align-items: center;
+  }
+  h1{
+    text-align: left;
+  }
+  .info{
+    grid-column: 1/1;
+    grid-row: 2/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 77%;
+  }
+  .logo{
+    grid-column: 1/3;
+  }
+  .wendell1{
+    grid-column: 2/2;
+    grid-row: 2/2;
+  }
+  .wendell1 img {
+    max-height: 516px;
+  }
+  header nav {
+    display: inline-block;
+    top: -50px;
+    z-index: 2;
+  }
+  .separador{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00d859+0,ffffff+100&1+0,0+80 */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,216,89,1) 0%, rgba(204,247,222,0) 80%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,216,89,1) 0%,rgba(204,247,222,0) 80%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  rgba(0,216,89,1) 0%,rgba(204,247,222,0) 80%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d859', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    height: 1px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: -7%;
+    opacity: 0.2;
+  }
+  header .itens {
+    justify-content: unset;
+  }
+
+  #oquee .centro{
+    display: flex;
+    gap: 20px;
+  }
+  #oquee .centro p{
+    width: 50%;
+    border-left: rgb(1, 146, 62, 0.5) solid 1px;
+    padding-left: 20px;
+  }
+  .backText {
+    font-size: 6.7rem;
+    line-height: 6.7rem;
+  }
+  #wendell{
+    overflow: unset;
+  }
+  #wendell .centro{
+    display: flex;
+    gap: 20px;
+  }
+  #wendell img {
+    max-height: 595px;
+    left: unset;
+  }
+}
+@media screen and (min-width: 1115px) {
+  .centro{
+    max-width: 1075px;
+    margin: 0 auto;
+  }
+  .wendell1 img {
+    max-height: 627px;
+  }
+  header .gridHeader {
+    grid-template-columns: auto 518px;
+  }
+  header{
+    background-size: 2000px;
+    background-position: calc(100% / 2 + 283px) -81px;
+    background-repeat: repeat-x;
+  }
+  header .cta {
+    justify-content: unset;
+  }
+  .info {
+    height: 57%;
+  }
+  .separador{
+    top: -20%;
+  }
+
+  header nav {
+    top: -100px;
+  }
+  body,
+  section p {
+    font-size: 1.1rem;
+  }
+  #oquee .centro {
+    display: flex;
+    gap: 70px;
+  }
+  #oquee .centro p {
+    width: 50%;
+  }
+  .backText {
+    font-size: 7.7rem;
+    line-height: 7.7rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  h1{
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+  }
+  .pilar {
+    width: 69%;
+    max-width: unset;
+    margin: 0 auto 20px auto;
+  }
+  .pilar h4, .motivo h4 {
+    font-size: 1.5rem;
+  }
+  .pilar img, .pilar img.imgToLeft {
+    border-radius: 24px;
+  }
+  #wendell img {
+    max-height: 718px;
+    left: unset;
+  }
+  .motivos {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.333% - 10px));
+  }
+}
+
+@media screen and (min-width: 1115px) {
+  .backText {
+    font-size: 9.2rem;
+    line-height: 9.2rem;
+  }
+}
